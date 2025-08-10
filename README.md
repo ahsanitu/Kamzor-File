@@ -11,6 +11,7 @@ This project implements a Huffman coding based file compressor and decompressor 
 - Saves and loads frequency metadata for accurate decompression.
 - Command line interface for easy usage.
 - Unit tests using Catch2 framework to ensure correctness.
+- Auto-generated API documentation using Doxygen.
 
 ---
 
@@ -22,12 +23,14 @@ This project implements a Huffman coding based file compressor and decompressor 
 - `main.cpp`: CLI application to compress and decompress files.
 - `test.cpp`: Unit tests validating core functionality.
 - `Makefile`: Build instructions for the project.
+- `Doxyfile`: Configuration file for generating documentation.
 
 ---
 
 ## Requirements
 - C++17 compatible compiler (e.g., `g++` 7+)
 - Catch2 testing framework header (`catch.hpp`) included in the project directory.
+- Doxygen installed for documentation generation (optional).
 
 ---
 
@@ -40,3 +43,4 @@ make run_test  # Runs all unit tests
 make run_main ARGS="compress input.txt output.huff"   # Compress a file
 make run_main ARGS="decompress output.huff restored.txt"  # Decompress a file
 make clean    # Remove all build artifacts
+
