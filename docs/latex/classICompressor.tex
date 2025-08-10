@@ -1,0 +1,94 @@
+\hypertarget{classICompressor}{}\doxysection{ICompressor Class Reference}
+\label{classICompressor}\index{ICompressor@{ICompressor}}
+
+
+Abstract interface class for compression and decompression algorithms.  
+
+
+
+
+{\ttfamily \#include $<$ICompressor.\+h$>$}
+
+
+
+Inheritance diagram for ICompressor\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classICompressor_af731126c701d9ea9d2767393ff21ac74}\label{classICompressor_af731126c701d9ea9d2767393ff21ac74}} 
+virtual {\bfseries $\sim$\+ICompressor} ()=default
+\begin{DoxyCompactList}\small\item\em Virtual destructor. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classICompressor_a8ea5843c59329278de1a309ba501923c}{compress}} (const std\+::string \&input\+File, const std\+::string \&output\+File)=0
+\begin{DoxyCompactList}\small\item\em Compresses the input file and writes the compressed output. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classICompressor_ab73ca77f2a18adaa16138431a2bf4c13}{decompress}} (const std\+::string \&input\+File, const std\+::string \&output\+File)=0
+\begin{DoxyCompactList}\small\item\em Decompresses the input file and writes the decompressed output. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Abstract interface class for compression and decompression algorithms. 
+
+This interface defines the required methods for any compression class. Classes inheriting from \mbox{\hyperlink{classICompressor}{ICompressor}} must implement both compression and decompression functions. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classICompressor_a8ea5843c59329278de1a309ba501923c}\label{classICompressor_a8ea5843c59329278de1a309ba501923c}} 
+\index{ICompressor@{ICompressor}!compress@{compress}}
+\index{compress@{compress}!ICompressor@{ICompressor}}
+\doxysubsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily virtual void ICompressor\+::compress (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+File,  }\item[{const std\+::string \&}]{output\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Compresses the input file and writes the compressed output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Path to the file to be compressed. \\
+\hline
+{\em output\+File} & Path where the compressed file will be saved. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & If file paths are empty. \\
+\hline
+{\em std\+::runtime\+\_\+error} & On compression failure. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classHuffmanCompressor_a83fc8e27265c76ec7c8b99d0f62d0fdd}{Huffman\+Compressor}}.
+
+\mbox{\Hypertarget{classICompressor_ab73ca77f2a18adaa16138431a2bf4c13}\label{classICompressor_ab73ca77f2a18adaa16138431a2bf4c13}} 
+\index{ICompressor@{ICompressor}!decompress@{decompress}}
+\index{decompress@{decompress}!ICompressor@{ICompressor}}
+\doxysubsubsection{\texorpdfstring{decompress()}{decompress()}}
+{\footnotesize\ttfamily virtual void ICompressor\+::decompress (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+File,  }\item[{const std\+::string \&}]{output\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Decompresses the input file and writes the decompressed output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Path to the compressed file. \\
+\hline
+{\em output\+File} & Path where the decompressed file will be saved. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & If file paths are empty. \\
+\hline
+{\em std\+::runtime\+\_\+error} & On decompression failure. \\
+\hline
+\end{DoxyExceptions}
+
+
+Implemented in \mbox{\hyperlink{classHuffmanCompressor_aa2df6551c3f13fee6e72b5589d5534e3}{Huffman\+Compressor}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+ICompressor.\+h\end{DoxyCompactItemize}

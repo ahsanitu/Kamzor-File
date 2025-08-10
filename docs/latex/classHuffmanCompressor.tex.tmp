@@ -1,0 +1,80 @@
+\hypertarget{classHuffmanCompressor}{}\doxysection{Huffman\+Compressor Class Reference}
+\label{classHuffmanCompressor}\index{HuffmanCompressor@{HuffmanCompressor}}
+
+
+\mbox{\hyperlink{classHuffmanCompressor}{Huffman\+Compressor}} is responsible for managing the compression and decompression process using Huffman coding.  
+
+
+
+
+{\ttfamily \#include $<$Huffman\+Compressor.\+h$>$}
+
+
+
+Inheritance diagram for Huffman\+Compressor\+:
+% FIG 0
+
+
+Collaboration diagram for Huffman\+Compressor\+:
+% FIG 1
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classHuffmanCompressor_a83fc8e27265c76ec7c8b99d0f62d0fdd}{compress}} (const std\+::string \&input\+File, const std\+::string \&output\+File) override
+\begin{DoxyCompactList}\small\item\em Compresses a file using Huffman coding and stores frequency metadata. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHuffmanCompressor_aa2df6551c3f13fee6e72b5589d5534e3}{decompress}} (const std\+::string \&input\+File, const std\+::string \&output\+File) override
+\begin{DoxyCompactList}\small\item\em Decompresses a file using Huffman coding and frequency metadata. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classHuffmanCompressor}{Huffman\+Compressor}} is responsible for managing the compression and decompression process using Huffman coding. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHuffmanCompressor_a83fc8e27265c76ec7c8b99d0f62d0fdd}\label{classHuffmanCompressor_a83fc8e27265c76ec7c8b99d0f62d0fdd}} 
+\index{HuffmanCompressor@{HuffmanCompressor}!compress@{compress}}
+\index{compress@{compress}!HuffmanCompressor@{HuffmanCompressor}}
+\doxysubsubsection{\texorpdfstring{compress()}{compress()}}
+{\footnotesize\ttfamily void Huffman\+Compressor\+::compress (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+File,  }\item[{const std\+::string \&}]{output\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Compresses a file using Huffman coding and stores frequency metadata. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Path to the input file. \\
+\hline
+{\em output\+File} & Path to store the compressed file. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classICompressor_a8ea5843c59329278de1a309ba501923c}{ICompressor}}.
+
+\mbox{\Hypertarget{classHuffmanCompressor_aa2df6551c3f13fee6e72b5589d5534e3}\label{classHuffmanCompressor_aa2df6551c3f13fee6e72b5589d5534e3}} 
+\index{HuffmanCompressor@{HuffmanCompressor}!decompress@{decompress}}
+\index{decompress@{decompress}!HuffmanCompressor@{HuffmanCompressor}}
+\doxysubsubsection{\texorpdfstring{decompress()}{decompress()}}
+{\footnotesize\ttfamily void Huffman\+Compressor\+::decompress (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{input\+File,  }\item[{const std\+::string \&}]{output\+File }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Decompresses a file using Huffman coding and frequency metadata. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Path to the compressed file. \\
+\hline
+{\em output\+File} & Path to store the decompressed file. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classICompressor_ab73ca77f2a18adaa16138431a2bf4c13}{ICompressor}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Huffman\+Compressor.\+h\item 
+Huffman\+Compressor.\+cpp\end{DoxyCompactItemize}

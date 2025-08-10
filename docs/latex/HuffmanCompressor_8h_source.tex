@@ -1,0 +1,26 @@
+\hypertarget{HuffmanCompressor_8h_source}{}\doxysection{Huffman\+Compressor.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef HUFFMAN\_COMPRESSOR\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define HUFFMAN\_COMPRESSOR\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}ICompressor.h"{}}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include "{}FrequencyAnalyzer.h"{}}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}HuffmanTree.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classHuffmanCompressor}{HuffmanCompressor}} : \textcolor{keyword}{public} \mbox{\hyperlink{classICompressor}{ICompressor}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{public}:}
+\DoxyCodeLine{21     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHuffmanCompressor_a83fc8e27265c76ec7c8b99d0f62d0fdd}{compress}}(\textcolor{keyword}{const} std::string\& inputFile, \textcolor{keyword}{const} std::string\& outputFile) \textcolor{keyword}{override};}
+\DoxyCodeLine{22 }
+\DoxyCodeLine{28     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHuffmanCompressor_aa2df6551c3f13fee6e72b5589d5534e3}{decompress}}(\textcolor{keyword}{const} std::string\& inputFile, \textcolor{keyword}{const} std::string\& outputFile) \textcolor{keyword}{override};}
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{keyword}{private}:}
+\DoxyCodeLine{31     \textcolor{keywordtype}{void} saveFrequencyMap(\textcolor{keyword}{const} std::string\& metaFile, \textcolor{keyword}{const} std::unordered\_map<char, int>\& freqMap);}
+\DoxyCodeLine{32     std::unordered\_map<char, int> loadFrequencyMap(\textcolor{keyword}{const} std::string\& metaFile);}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// HUFFMAN\_COMPRESSOR\_H}}
+
+\end{DoxyCode}

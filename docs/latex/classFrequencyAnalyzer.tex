@@ -1,0 +1,51 @@
+\hypertarget{classFrequencyAnalyzer}{}\doxysection{Frequency\+Analyzer Class Reference}
+\label{classFrequencyAnalyzer}\index{FrequencyAnalyzer@{FrequencyAnalyzer}}
+
+
+Analyzes the frequency of each character in a given file.  
+
+
+
+
+{\ttfamily \#include $<$Frequency\+Analyzer.\+h$>$}
+
+\doxysubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static std\+::unordered\+\_\+map$<$ char, int $>$ \mbox{\hyperlink{classFrequencyAnalyzer_aef3157280ead28cf9aeeed05534a8bbf}{analyze}} (const std\+::string \&filename)
+\begin{DoxyCompactList}\small\item\em Analyzes the character frequency in a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Analyzes the frequency of each character in a given file. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classFrequencyAnalyzer_aef3157280ead28cf9aeeed05534a8bbf}\label{classFrequencyAnalyzer_aef3157280ead28cf9aeeed05534a8bbf}} 
+\index{FrequencyAnalyzer@{FrequencyAnalyzer}!analyze@{analyze}}
+\index{analyze@{analyze}!FrequencyAnalyzer@{FrequencyAnalyzer}}
+\doxysubsubsection{\texorpdfstring{analyze()}{analyze()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ char, int $>$ Frequency\+Analyzer\+::analyze (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Analyzes the character frequency in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unordered\+\_\+map$<$char, int$>$ A map containing each character and its frequency. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the file cannot be opened. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Frequency\+Analyzer.\+h\item 
+Frequency\+Analyzer.\+cpp\end{DoxyCompactItemize}

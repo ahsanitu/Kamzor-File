@@ -1,0 +1,41 @@
+\hypertarget{HuffmanTree_8h_source}{}\doxysection{Huffman\+Tree.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#ifndef HUFFMANTREE\_H}}
+\DoxyCodeLine{2 \textcolor{preprocessor}{\#define HUFFMANTREE\_H}}
+\DoxyCodeLine{3 }
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include <unordered\_map>}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#include <stdexcept>}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include "{}Node.h"{}}}
+\DoxyCodeLine{9 }
+\DoxyCodeLine{14 \textcolor{keyword}{class }\mbox{\hyperlink{classHuffmanTree}{HuffmanTree}} \{}
+\DoxyCodeLine{15 \textcolor{keyword}{private}:}
+\DoxyCodeLine{16     \mbox{\hyperlink{classNode}{Node}}* root; }
+\DoxyCodeLine{17     std::unordered\_map<char, std::string> codes; }
+\DoxyCodeLine{18 }
+\DoxyCodeLine{24     \textcolor{keywordtype}{void} generateCodes(\mbox{\hyperlink{classNode}{Node}}* node, \textcolor{keyword}{const} std::string\& code);}
+\DoxyCodeLine{25 }
+\DoxyCodeLine{30     \textcolor{keywordtype}{void} freeTree(\mbox{\hyperlink{classNode}{Node}}* node);}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{32 \textcolor{keyword}{public}:}
+\DoxyCodeLine{36     \mbox{\hyperlink{classHuffmanTree_a69699f7de5cfcd69e741f72ecb2b043d}{HuffmanTree}}();}
+\DoxyCodeLine{37 }
+\DoxyCodeLine{41     \mbox{\hyperlink{classHuffmanTree_a1c39382be4e786a99a07183bbee3830d}{\string~HuffmanTree}}();}
+\DoxyCodeLine{42 }
+\DoxyCodeLine{48     \textcolor{keywordtype}{void} \mbox{\hyperlink{classHuffmanTree_a43498371e9737dc2a5cfb6ebe2d87e94}{build}}(\textcolor{keyword}{const} std::unordered\_map<char, int>\& frequencies);}
+\DoxyCodeLine{49 }
+\DoxyCodeLine{55     std::unordered\_map<char, std::string> \mbox{\hyperlink{classHuffmanTree_a987cbe98dab64d0f2e1007318fa19741}{getCodes}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{56 }
+\DoxyCodeLine{61     \mbox{\hyperlink{classNode}{Node}}* \mbox{\hyperlink{classHuffmanTree_ae37aadff14769a907eb3b1e6c72bb216}{getRoot}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{69     std::string \mbox{\hyperlink{classHuffmanTree_a06e457d4de72fb269ff6d91608056c63}{getCode}}(\textcolor{keywordtype}{char} ch) \textcolor{keyword}{const};}
+\DoxyCodeLine{70 }
+\DoxyCodeLine{76     std::string \mbox{\hyperlink{classHuffmanTree_aba316299acfa7d2023391240aa6e670a}{decode}}(\textcolor{keyword}{const} std::string\& encodedStr) \textcolor{keyword}{const};}
+\DoxyCodeLine{77 }
+\DoxyCodeLine{78 \};}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// HUFFMANTREE\_H}}
+
+\end{DoxyCode}

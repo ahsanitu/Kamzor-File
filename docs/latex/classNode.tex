@@ -1,0 +1,70 @@
+\hypertarget{classNode}{}\doxysection{Node Class Reference}
+\label{classNode}\index{Node@{Node}}
+
+
+Analyzes the frequency of each character in a given file.  
+
+
+
+
+{\ttfamily \#include $<$Node.\+h$>$}
+
+
+
+Collaboration diagram for Node\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classNode_a1d7772fc917a6e09106caed68fc389a6}{Node}} (char c, int f)
+\begin{DoxyCompactList}\small\item\em Analyzes the character frequency in a file. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classNode_a60b3924d995a47df096d90f9a926d7ba}\label{classNode_a60b3924d995a47df096d90f9a926d7ba}} 
+char {\bfseries ch}
+\item 
+\mbox{\Hypertarget{classNode_a93e1b0f2d619b5ce1b19d982e967e579}\label{classNode_a93e1b0f2d619b5ce1b19d982e967e579}} 
+int {\bfseries freq}
+\item 
+\mbox{\Hypertarget{classNode_ab8c667ac8fdb120ed4c031682a9cdaee}\label{classNode_ab8c667ac8fdb120ed4c031682a9cdaee}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries left}
+\item 
+\mbox{\Hypertarget{classNode_a7328862eaa6dea28018326549b3294d3}\label{classNode_a7328862eaa6dea28018326549b3294d3}} 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ {\bfseries right}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Analyzes the frequency of each character in a given file. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classNode_a1d7772fc917a6e09106caed68fc389a6}\label{classNode_a1d7772fc917a6e09106caed68fc389a6}} 
+\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}}
+{\footnotesize\ttfamily Node\+::\+Node (\begin{DoxyParamCaption}\item[{char}]{c,  }\item[{int}]{f }\end{DoxyParamCaption})}
+
+
+
+Analyzes the character frequency in a file. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em filename} & Path to the file. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::unordered\+\_\+map$<$char, int$>$ A map containing each character and its frequency. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If the file cannot be opened. \\
+\hline
+\end{DoxyExceptions}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Node.\+h\item 
+Node.\+cpp\end{DoxyCompactItemize}

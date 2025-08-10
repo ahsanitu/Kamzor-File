@@ -1,0 +1,134 @@
+\hypertarget{classHuffmanTree}{}\doxysection{Huffman\+Tree Class Reference}
+\label{classHuffmanTree}\index{HuffmanTree@{HuffmanTree}}
+
+
+Builds and manages a Huffman tree for encoding and decoding.  
+
+
+
+
+{\ttfamily \#include $<$Huffman\+Tree.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classHuffmanTree_a69699f7de5cfcd69e741f72ecb2b043d}\label{classHuffmanTree_a69699f7de5cfcd69e741f72ecb2b043d}} 
+{\bfseries Huffman\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Constructor initializes root to nullptr. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classHuffmanTree_a1c39382be4e786a99a07183bbee3830d}\label{classHuffmanTree_a1c39382be4e786a99a07183bbee3830d}} 
+{\bfseries $\sim$\+Huffman\+Tree} ()
+\begin{DoxyCompactList}\small\item\em Destructor frees all dynamically allocated nodes. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classHuffmanTree_a43498371e9737dc2a5cfb6ebe2d87e94}{build}} (const std\+::unordered\+\_\+map$<$ char, int $>$ \&frequencies)
+\begin{DoxyCompactList}\small\item\em Builds the Huffman tree from a frequency map. \end{DoxyCompactList}\item 
+std\+::unordered\+\_\+map$<$ char, std\+::string $>$ \mbox{\hyperlink{classHuffmanTree_a987cbe98dab64d0f2e1007318fa19741}{get\+Codes}} () const
+\begin{DoxyCompactList}\small\item\em Gets the generated Huffman codes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classNode}{Node}} $\ast$ \mbox{\hyperlink{classHuffmanTree_ae37aadff14769a907eb3b1e6c72bb216}{get\+Root}} () const
+\begin{DoxyCompactList}\small\item\em Gets the root node of the Huffman tree. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classHuffmanTree_a06e457d4de72fb269ff6d91608056c63}{get\+Code}} (char ch) const
+\begin{DoxyCompactList}\small\item\em Get the Huffman code for a single character. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classHuffmanTree_aba316299acfa7d2023391240aa6e670a}{decode}} (const std\+::string \&encoded\+Str) const
+\begin{DoxyCompactList}\small\item\em Decode a bitstring using the Huffman Tree. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Builds and manages a Huffman tree for encoding and decoding. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classHuffmanTree_a43498371e9737dc2a5cfb6ebe2d87e94}\label{classHuffmanTree_a43498371e9737dc2a5cfb6ebe2d87e94}} 
+\index{HuffmanTree@{HuffmanTree}!build@{build}}
+\index{build@{build}!HuffmanTree@{HuffmanTree}}
+\doxysubsubsection{\texorpdfstring{build()}{build()}}
+{\footnotesize\ttfamily void Huffman\+Tree\+::build (\begin{DoxyParamCaption}\item[{const std\+::unordered\+\_\+map$<$ char, int $>$ \&}]{frequencies }\end{DoxyParamCaption})}
+
+
+
+Builds the Huffman tree from a frequency map. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em frequencies} & Map of characters to their frequencies. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::invalid\+\_\+argument} & If the frequency map is empty. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classHuffmanTree_aba316299acfa7d2023391240aa6e670a}\label{classHuffmanTree_aba316299acfa7d2023391240aa6e670a}} 
+\index{HuffmanTree@{HuffmanTree}!decode@{decode}}
+\index{decode@{decode}!HuffmanTree@{HuffmanTree}}
+\doxysubsubsection{\texorpdfstring{decode()}{decode()}}
+{\footnotesize\ttfamily std\+::string Huffman\+Tree\+::decode (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{encoded\+Str }\end{DoxyParamCaption}) const}
+
+
+
+Decode a bitstring using the Huffman Tree. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em encoded\+Str} & The bitstring to decode. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Decoded text. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classHuffmanTree_a06e457d4de72fb269ff6d91608056c63}\label{classHuffmanTree_a06e457d4de72fb269ff6d91608056c63}} 
+\index{HuffmanTree@{HuffmanTree}!getCode@{getCode}}
+\index{getCode@{getCode}!HuffmanTree@{HuffmanTree}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily std\+::string Huffman\+Tree\+::get\+Code (\begin{DoxyParamCaption}\item[{char}]{ch }\end{DoxyParamCaption}) const}
+
+
+
+Get the Huffman code for a single character. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ch} & The character whose code is required. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string The Huffman code for the character. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if codes have not been generated or character not found. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classHuffmanTree_a987cbe98dab64d0f2e1007318fa19741}\label{classHuffmanTree_a987cbe98dab64d0f2e1007318fa19741}} 
+\index{HuffmanTree@{HuffmanTree}!getCodes@{getCodes}}
+\index{getCodes@{getCodes}!HuffmanTree@{HuffmanTree}}
+\doxysubsubsection{\texorpdfstring{getCodes()}{getCodes()}}
+{\footnotesize\ttfamily std\+::unordered\+\_\+map$<$ char, std\+::string $>$ Huffman\+Tree\+::get\+Codes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the generated Huffman codes. 
+
+\begin{DoxyReturn}{Returns}
+Map of characters to binary codes. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & If codes are not generated. \\
+\hline
+\end{DoxyExceptions}
+\mbox{\Hypertarget{classHuffmanTree_ae37aadff14769a907eb3b1e6c72bb216}\label{classHuffmanTree_ae37aadff14769a907eb3b1e6c72bb216}} 
+\index{HuffmanTree@{HuffmanTree}!getRoot@{getRoot}}
+\index{getRoot@{getRoot}!HuffmanTree@{HuffmanTree}}
+\doxysubsubsection{\texorpdfstring{getRoot()}{getRoot()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classNode}{Node}} $\ast$ Huffman\+Tree\+::get\+Root (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the root node of the Huffman tree. 
+
+\begin{DoxyReturn}{Returns}
+Pointer to root node. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Huffman\+Tree.\+h\item 
+Huffman\+Tree.\+cpp\end{DoxyCompactItemize}
